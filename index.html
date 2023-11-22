@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time tracking dashboard</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="app.js" defer></script>
+  </head>
+  <body
+    class="flex justify-center items-center min-h-screen text-lg bg-veryDarkBlue"
+  >
+    <div
+      class="wrapper w-[360px] lg:w-[900px] lg:grid grid-cols-4 lg:grid-rows-2 lg:gap-6 space-y-4 lg:space-y-0 font-light"
+    >
+      <div class="card-name rounded-xl lg:row-span-full bg-darkBlue">
+        <div
+          class="flex items-center lg:flex-col lg:items-start p-8 bg-blue rounded-xl"
+        >
+          <img
+            src="img/image-jeremy.png"
+            alt="Jeremy"
+            class="mr-6 w-20 lg:w-16 lg:mb-7 border-[3px] rounded-full"
+          />
+          <div>
+            <p class="text-paleBlue text-base lg:text-xs">Report for</p>
+            <p class="text-white text-2xl lg:text-3xl lg:mb-8">Jeremy Robson</p>
+          </div>
+        </div>
+        <div
+          class="flex lg:flex-col lg:items-start lg:space-y-2 justify-between py-6 px-8 text-desaturatedBlue"
+        >
+          <button class="time-range-btn hover:text-gray-400 transition-colors">
+            Daily
+          </button>
+          <button
+            class="time-range-btn hover:text-gray-400 transition-colors text-white"
+          >
+            Weekly
+          </button>
+          <button class="time-range-btn hover:text-gray-400 transition-colors">
+            Monthly
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="card-activity relative rounded-xl overflow-hidden pt-10 bg-lightOrange"
+      >
+        <img
+          class="absolute top-[-10px] right-4"
+          src="img/icon-work.svg"
+          alt=""
+        />
+        <div
+          class="relative p-6 space-y-1 bg-darkBlue rounded-lg z-10 lg:hover:bg-[#363b8a] lg:hover:cursor-pointer"
+        >
+          <div class="flex justify-between items-center">
+            <p class="lg:mb-4 font-[500] text-white text-lg lg:text-base">
+              Work
+            </p>
+            <button>
+              <img
+                class="relative w-4 lg:-top-2"
+                src="img/icon-ellipsis.svg"
+                alt="dots"
+              />
+            </button>
+          </div>
+          <div
+            class="flex lg:flex-col lg:items-start justify-between items-center"
+          >
+            <p
+              class="current-stat-text lg:mb-2 text-3xl lg:text-5xl text-white"
+            >
+              32hrs
+            </p>
+            <p class="previous-stat-text text-paleBlue lg:text-xs">
+              Last Week - 36hrs
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card-activity relative rounded-xl overflow-hidden pt-10 bg-softBlue"
+      >
+        <img
+          class="absolute top-[-10px] right-4"
+          src="img/icon-play.svg"
+          alt=""
+        />
+        <div
+          class="relative p-6 space-y-1 bg-darkBlue rounded-lg z-10 lg:hover:bg-[#363b8a] lg:hover:cursor-pointer"
+        >
+          <div class="flex justify-between items-center">
+            <p class="lg:mb-4 font-[500] text-white text-lg lg:text-base">
+              Play
+            </p>
+            <button>
+              <img
+                class="relative w-4 lg:-top-2"
+                src="img/icon-ellipsis.svg"
+                alt="dots"
+              />
+            </button>
+          </div>
+          <div
+            class="flex lg:flex-col lg:items-start justify-between items-center"
+          >
+            <p
+              class="current-stat-text lg:mb-2 text-3xl lg:text-5xl text-white"
+            >
+              10hrs
+            </p>
+            <p class="previous-stat-text text-paleBlue lg:text-xs">
+              Last Week - 8hrs
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card-activity relative rounded-xl overflow-hidden pt-10 bg-lightRed"
+      >
+        <img
+          class="absolute top-[-10px] right-4"
+          src="img/icon-study.svg"
+          alt=""
+        />
+        <div
+          class="relative p-6 space-y-1 bg-darkBlue rounded-lg z-10 lg:hover:bg-[#363b8a] lg:hover:cursor-pointer"
+        >
+          <div class="flex justify-between items-center">
+            <p class="lg:mb-4 font-[500] text-white text-lg lg:text-base">
+              Study
+            </p>
+            <button>
+              <img
+                class="relative w-4 lg:-top-2"
+                src="img/icon-ellipsis.svg"
+                alt="dots"
+              />
+            </button>
+          </div>
+          <div
+            class="flex lg:flex-col lg:items-start justify-between items-center"
+          >
+            <p
+              class="current-stat-text lg:mb-2 text-3xl lg:text-5xl text-white"
+            >
+              4hrs
+            </p>
+            <p class="previous-stat-text text-paleBlue lg:text-xs">
+              Last Week - 7hrs
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card-activity relative rounded-xl overflow-hidden pt-10 bg-limeGreen"
+      >
+        <img
+          class="absolute top-[-10px] right-4"
+          src="img/icon-exercise.svg"
+          alt=""
+        />
+        <div
+          class="relative p-6 space-y-1 bg-darkBlue rounded-lg z-10 lg:hover:bg-[#363b8a] lg:hover:cursor-pointer"
+        >
+          <div class="flex justify-between items-center">
+            <p class="lg:mb-4 font-[500] text-white text-lg lg:text-base">
+              Exercise
+            </p>
+            <button>
+              <img
+                class="relative w-4 lg:-top-2"
+                src="img/icon-ellipsis.svg"
+                alt="dots"
+              />
+            </button>
+          </div>
+          <div
+            class="flex lg:flex-col lg:items-start justify-between items-center"
+          >
+            <p
+              class="current-stat-text lg:mb-2 text-3xl lg:text-5xl text-white"
+            >
+              4hrs
+            </p>
+            <p class="previous-stat-text text-paleBlue lg:text-xs">
+              Last Week - 5hrs
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card-activity relative rounded-xl overflow-hidden pt-10 bg-violet"
+      >
+        <img
+          class="absolute top-[-10px] right-4"
+          src="img/icon-social.svg"
+          alt=""
+        />
+        <div
+          class="relative p-6 space-y-1 bg-darkBlue rounded-lg z-10 lg:hover:bg-[#363b8a] lg:hover:cursor-pointer"
+        >
+          <div class="flex justify-between items-center">
+            <p class="lg:mb-4 font-[500] text-white text-lg lg:text-base">
+              Social
+            </p>
+            <button>
+              <img
+                class="relative w-4 lg:-top-2"
+                src="img/icon-ellipsis.svg"
+                alt="dots"
+              />
+            </button>
+          </div>
+          <div
+            class="flex lg:flex-col lg:items-start justify-between items-center"
+          >
+            <p
+              class="current-stat-text lg:mb-2 text-3xl lg:text-5xl text-white"
+            >
+              5hrs
+            </p>
+            <p class="previous-stat-text text-paleBlue lg:text-xs">
+              Last Week - 10hrs
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card-activity relative rounded-xl overflow-hidden pt-10 bg-softOrange"
+      >
+        <img
+          class="absolute top-[-10px] right-4"
+          src="img/icon-self-care.svg"
+          alt=""
+        />
+        <div
+          class="relative p-6 space-y-1 bg-darkBlue rounded-lg z-10 lg:hover:bg-[#363b8a] lg:hover:cursor-pointer"
+        >
+          <div class="flex justify-between items-center">
+            <p class="lg:mb-4 font-[500] text-white text-lg lg:text-base">
+              Self Care
+            </p>
+            <button>
+              <img
+                class="relative w-4 lg:-top-2"
+                src="img/icon-ellipsis.svg"
+                alt="dots"
+              />
+            </button>
+          </div>
+          <div
+            class="flex lg:flex-col lg:items-start justify-between items-center"
+          >
+            <p
+              class="current-stat-text lg:mb-2 text-3xl lg:text-5xl text-white"
+            >
+              2hrs
+            </p>
+            <p class="previous-stat-text text-paleBlue lg:text-xs">
+              Last Week - 2hrs
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
